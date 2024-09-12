@@ -1,3 +1,19 @@
+#!/bin/bash
+
+# Path to SwiftDialog
+dialog='/usr/local/bin/dialog'
+
+# get loggedInUser user
+loggedInUser=$( /usr/sbin/scutil <<< "show State:/Users/ConsoleUser" | /usr/bin/awk '/Name :/ { print $3 }' )
+loggedInUserID=$( /usr/bin/id -u "$loggedInUser" )
+
+runAsUser() {
+  if [ "$loggedInUser" != "loginwindow" ]; then
+    uid=$(id -u "$loggedInUser")
+    /bin/launchctl asuser "$uid" sudo -u "$loggedInUser" "$@"
+  fi
+}
+
 ###########################################################################################################################################################################
 #   Check for Power   #
 ###########################################################################################################################################################################
@@ -10,7 +26,7 @@ dialogPowerCommandFile=$(mktemp /var/tmp/dialogpower.XXXXX)
 # Function to display a dialog asking to plug into power
 displayPlugInPowerDialog() {
     # Display the dialog alert
-    /usr/local/bin/dialog command display alert \
+runAsUser $dialog command display alert \
     --title "Power Check" \
     --message "Power is required to continue setting up your Mac. Please connect your charger." \
     --messagealignment "center" \
