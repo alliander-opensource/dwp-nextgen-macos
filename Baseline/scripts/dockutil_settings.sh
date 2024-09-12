@@ -35,3 +35,5 @@ addToDock '/Applications/Microsoft Powerpoint.app'
 addToDock '/Applications/Microsoft Teams.app'
 addToDock '/Applications/Microsoft Edge.app'
 addToDock '/Applications/Company Portal.app'
+
+exit 0 
