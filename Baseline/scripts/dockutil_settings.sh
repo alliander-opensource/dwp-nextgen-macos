@@ -1,14 +1,27 @@
 #!/bin/bash
 
-# add items to dock
-/usr/local/bin/dockutil --add  /Applications/Microsoft Outlook.app
-/usr/local/bin/dockutil --add  /Applications/Microsoft Word.app
-/usr/local/bin/dockutil --add  /Applications/Microsoft Excel.app
-/usr/local/bin/dockutil --add  /Applications/Microsoft Powerpoint.app
-/usr/local/bin/dockutil --add  /Applications/Microsoft Teams.app
-/usr/local/bin/dockutil --add  /Applications/Microsoft Edge.app
-/usr/local/bin/dockutil --add  /Applications/Company Portal.app
+currentUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ { print $3 }' )
+dockPrefs="/Users/$currentUser/Library/Preferences/com.apple.dock.plist"
+uid=$(id -u "$currentUser")
 
-killall Dock
+runAsUser() {  
+	if [ "$currentUser" != "loginwindow" ]; then
+		launchctl asuser "$uid" sudo -u "$currentUser" "$@"
+	else
+		echo "no user logged in"
+	fi
+}
 
-exit 0 
+addToDock() {  
+		runAsUser /usr/local/bin/dockutil --add "$@" --allhomes /Users/$currentUser > /dev/null 2>&1 || true
+}
+
+addToDock "/Applications/Microsoft Outlook.app"
+addToDock "/Applications/Microsoft Teams.app"
+addToDock "/Applications/Microsoft Word.app"
+addToDock "/Applications/Microsoft Excel.app"
+addToDock "/Applications/Microsoft Powerpoint.app"
+addToDock "/Applications/Microsoft Edge.app"
+addToDock "/Applications/Company Portal.app"
+
+exit
