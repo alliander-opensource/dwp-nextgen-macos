@@ -21,11 +21,6 @@ addToDock() {
 			grepterm=$(echo "$@" | sed 's/ /%20/g')
 			inDock=$(defaults read /Users/$currentUser/Library/Preferences/com.apple.dock.plist persistent-apps | grep -c "$grepterm")
 			counter=$[$counter+1]
-            echo "$@: Status:$inDock Counter $counter" >> /private/var/log/Dockutil.log
-            if [ "$counter" -gt "999" ]; then
-            	 echo "$@: Failed" >> /private/var/log/Dockutil.log
-                 inDock="0"
-            fi
 		done
 	else
 		echo "$@ is not installed, so will not be added to the dock"
