@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Run as user
+currentUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ { print $3 }' )
+uid=$(id -u "$currentUser")
+
+runAsUser() {  
+	if [ "$currentUser" != "loginwindow" ]; then
+		launchctl asuser "$uid" sudo -u "$currentUser" "$@"
+	else
+		echo "no user logged in"
+	fi
+}
+
 # Path to SwiftDialog
 dialogPath='/usr/local/bin/dialog'
 
