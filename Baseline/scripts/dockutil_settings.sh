@@ -33,10 +33,10 @@ addToDock() {
 }
 
 # add items to dock
-addToDock '/Applications/Microsoft Outlook.app' --no-restart
-addToDock '/Applications/Microsoft Word.app' --no-restart
-addToDock '/Applications/Microsoft Excel.app' --no-restart
-addToDock '/Applications/Microsoft Powerpoint.app' --no-restart
-addToDock '/Applications/Microsoft Teams.app' --no-restart
-addToDock '/Applications/Microsoft Edge.app' --no-restart
-addToDock '/Applications/Company Portal.app' --no-restart
+addToDock '/Applications/Microsoft Outlook.app'
+addToDock '/Applications/Microsoft Word.app'
+addToDock '/Applications/Microsoft Excel.app'
+addToDock '/Applications/Microsoft Powerpoint.app'
+addToDock '/Applications/Microsoft Teams.app'
+addToDock '/Applications/Microsoft Edge.app'
+addToDock '/Applications/Company Portal.app'
