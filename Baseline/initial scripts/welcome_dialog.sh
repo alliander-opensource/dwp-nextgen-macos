@@ -14,18 +14,6 @@ runAsUser() {
   fi
 }
 
-echo loggedInUser: $loggedInUser
-echo "loggedInUser: _${loggedInUser}_"
-echo loggedInUserID: $loggedInUserID
-echo "loggedInUserID: _${loggedInUserID}_"
-
-if [ "$loggedInUserID" == "" ]; then
-    echo "no logged in user. loggedInUserID: $loggedInUserID"
-    exit
-else
-	echo "looks like user $loggedInUser with ID $loggedInUserID is logged in."
-fi
-
 ###########################################################################################################################################################################
 #   Check for Power   #
 ###########################################################################################################################################################################
