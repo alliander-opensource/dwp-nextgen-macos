@@ -4,7 +4,7 @@
 dialog='/usr/local/bin/dialog'
 
 # Display the Welcome message using swiftDialog
-dialog \
+$dialog \
 --blurscreen \
 --ontop \
 --title "Welcome to your new MacBook!" \
