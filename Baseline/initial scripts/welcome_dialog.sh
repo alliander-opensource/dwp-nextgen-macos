@@ -3,8 +3,31 @@
 # Path to SwiftDialog
 dialog='/usr/local/bin/dialog'
 
+# get loggedInUser user
+loggedInUser=$( /usr/sbin/scutil <<< "show State:/Users/ConsoleUser" | /usr/bin/awk '/Name :/ { print $3 }' )
+loggedInUserID=$( /usr/bin/id -u "$loggedInUser" )
+
+runAsUser() {
+  if [ "$loggedInUser" != "loginwindow" ]; then
+    uid=$(id -u "$loggedInUser")
+    /bin/launchctl asuser "$uid" sudo -u "$loggedInUser" "$@"
+  fi
+}
+
+echo loggedInUser: $loggedInUser
+echo "loggedInUser: _${loggedInUser}_"
+echo loggedInUserID: $loggedInUserID
+echo "loggedInUserID: _${loggedInUserID}_"
+
+if [ "$loggedInUserID" == "" ]; then
+    echo "no logged in user. loggedInUserID: $loggedInUserID"
+    exit
+else
+	echo "looks like user $loggedInUser with ID $loggedInUserID is logged in."
+fi
+
 # Display the Welcome message using swiftDialog
-$dialog \
+runAsUser $dialog \
 --blurscreen \
 --ontop \
 --title "Welcome to your new MacBook!" \
