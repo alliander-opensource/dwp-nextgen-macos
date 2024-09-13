@@ -23,11 +23,12 @@ runAsUser $dialog \
 --ontop \
 --title "Welcome to your new MacBook!" \
 --icon "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/logo.png?raw=true" \
---message "To get started, we will guide you through the setup and install a basic toolset.\n\n When that's done, make sure you register your Mac through the notification 'Registration Required'.\n\n After that, make sure you register Uniflow, take a look in the Company Portal and enjoy your new Mac!" \
+--message "To get started, we will guide you through the setup and install a basic toolset.\n\n After the first setup, you need to register your Mac through the notification 'Registration Required'.\n\n After that, make sure you setup Uniflow and take a look in the Company Portal." \
 --messagefont "size=14" \
 --bannerimage "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/banner.png?raw=true" \
 --button1text "Get Started" \
---titlefont "size=20"
+--titlefont "size=20" \
+--timer "120"
 
 # After the button is pressed, exit the script
 exit 0
