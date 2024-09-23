@@ -24,13 +24,13 @@ runAsUser $dialog \
 --ontop \
 --title "Gefeliciteerd met je nieuwe MacBook!" \
 --icon "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/logo.png?raw=true" \
---message "Hoi$realName,\n\nWe gaan je helpen om alles in te stellen en de juiste programma's te installeren.\n\nAls de installatie klaar is, zie je een knop met **Restart** erop. Klik daarop om je MacBook opnieuw op te starten.\n\n Dit kan even duren, dus heb geduld...." \
+--message "Hoi$realName,\n\nWe gaan je helpen om alles in te stellen en de juiste programma's te installeren.\n\nAls de installatie klaar is, zie je een knop met **Restart now**. Klik daarop om je MacBook opnieuw op te starten.\n\n Dit kan even duren, dus heb geduld...." \
 --messagefont "size=14" \
 --bannerimage "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/banner.png?raw=true" \
 --button1text "Aan de slag" \
 --titlefont "size=20" \
 --timer "120" \
---height "30%"
+--big
 
 # After the button is pressed, exit the script
 exit 0
