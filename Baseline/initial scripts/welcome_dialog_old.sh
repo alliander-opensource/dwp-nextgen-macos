@@ -6,7 +6,6 @@ dialog='/usr/local/bin/dialog'
 # get loggedInUser user
 loggedInUser=$( /usr/sbin/scutil <<< "show State:/Users/ConsoleUser" | /usr/bin/awk '/Name :/ { print $3 }' )
 loggedInUserID=$( /usr/bin/id -u "$loggedInUser" )
-full_name=$(dscl . -read /Users/$(whoami) RealName | tail -1)
 
 runAsUser() {
   if [ "$loggedInUser" != "loginwindow" ]; then
@@ -22,15 +21,14 @@ runAsUser() {
 runAsUser $dialog \
 --blurscreen \
 --ontop \
---title "Gefeliciteerd met je nieuwe MacBook!" \
+--title "Welcome to your new MacBook!" \
 --icon "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/logo.png?raw=true" \
---message "Hoi$full_name,\n\nWe gaan je helpen om alles in te stellen en de juiste programma's te installeren.\n\nAls de installatie klaar is, zie je een knop met **Restart** erop. Klik daarop om je MacBook opnieuw op te starten.\n\n Dit kan even duren, dus heb geduld...." \
+--message "To get started, we will guide you through the setup and install a basic toolset.\n\n After the first setup, you need to register your Mac through the notification 'Registration Required'.\n\n After that, make sure you setup Uniflow and take a look in the Company Portal." \
 --messagefont "size=14" \
 --bannerimage "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/banner.png?raw=true" \
---button1text "Aan de slag" \
+--button1text "Get Started" \
 --titlefont "size=20" \
---timer "120" \
---height "30%"
+--timer "120"
 
 # After the button is pressed, exit the script
 exit 0
