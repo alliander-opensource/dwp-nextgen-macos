@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get a list of local accounts (UID > 500) excluding specific ones
-localAccts=$(dscl . list /Users UniqueID | awk '$2 > 500 {print $1}' | grep -vE 'mgtcltadmin|_mbsetupuser')
+localAccts=$(dscl . list /Users UniqueID | awk '$2 > 500 {print $1}' | grep -vE '_mbsetupuser')
 
 # Loop through the list of accounts and remove them from the admin group
 while IFS= read -r account; do
