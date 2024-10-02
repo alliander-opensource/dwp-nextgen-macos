@@ -12,7 +12,7 @@
 			<key>DialogSuccessOptions</key>
 			<string>--title "Installatie voltooid" --message "Installatie voltooid, je Mac wordt herstart..." --button1text "Herstart" --small --icon "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/logo.png?raw=true"</string>
 			<key>ExitCondition</key>
-			<string>/var/log/restartbaseline.alliander.log</string>
+			<string>/var/log/org.alliander.baseline.log</string>
 			<key>InitialScripts</key>
 			<array>
 				<dict>
