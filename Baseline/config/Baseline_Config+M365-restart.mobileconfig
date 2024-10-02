@@ -13,15 +13,6 @@
 			<string>--title "Installatie voltooid" --message "Installatie voltooid, je Mac wordt herstart..." --button1text "Herstart" --small --icon "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/logo.png?raw=true"</string>
 			<key>ExitCondition</key>
 			<string>/var/log/org.alliander.baseline.log</string>
-			<key>InitialScripts</key>
-			<array>
-				<dict>
-					<key>DisplayName</key>
-					<string>Welcome Dialog</string>
-					<key>ScriptPath</key>
-					<string>https://raw.githubusercontent.com/alliander-opensource/dwp-nextgen-macos/main/Baseline/initial%20scripts/welcome_dialog.sh</string>
-				</dict>
-			</array>
 			<key>Installomator</key>
 			<array>
 				<dict>
