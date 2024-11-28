@@ -7,6 +7,7 @@ BASE_DIR="/Library/Application Support/Alliander"
 PICTURES_DIR="$BASE_DIR/Pictures"
 PACKAGES_DIR="$BASE_DIR/Packages"
 SCRIPTS_DIR="$BASE_DIR/Scripts"
+LOGS_DIR="$BASE_DIR/Logs"
 
 # Define the URL to download the file
 FILE_URL="https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/logo.png?raw=true"
@@ -15,7 +16,7 @@ FILE_URL="https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Ba
 TARGET_FILE="$PICTURES_DIR/Alliander-Logo.png"
 
 # Create the directories if they don't exist
-for DIR in "$PICTURES_DIR" "$PACKAGES_DIR" "$SCRIPTS_DIR"; do
+for DIR in "$PICTURES_DIR" "$PACKAGES_DIR" "$SCRIPTS_DIR" "LOGS_DIR"; do
     if [ ! -d "$DIR" ]; then
         echo "Creating directory: $DIR"
         mkdir -p "$DIR"
