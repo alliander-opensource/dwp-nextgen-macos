@@ -16,7 +16,7 @@ FILE_URL="https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Ba
 TARGET_FILE="$PICTURES_DIR/Alliander-Logo.png"
 
 # Create the directories if they don't exist
-for DIR in "$PICTURES_DIR" "$PACKAGES_DIR" "$SCRIPTS_DIR" "LOGS_DIR"; do
+for DIR in "$PICTURES_DIR" "$PACKAGES_DIR" "$SCRIPTS_DIR" "$LOGS_DIR"; do
     if [ ! -d "$DIR" ]; then
         echo "Creating directory: $DIR"
         mkdir -p "$DIR"
