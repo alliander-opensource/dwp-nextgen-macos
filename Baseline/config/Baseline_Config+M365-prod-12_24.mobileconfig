@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DialogFailureOptions</key>
+			<string>--title "Er is iets misgegaan" --message "Klik op 'Mac Enrollment' in de Company Portal om de installatie opnieuw te starten of neem contact op met de IT Servicedesk op +31 (0)88 19 12345 of 12345.werkplek@alliander.com"</string>
+			<key>DialogListOptions</key>
+			<string>--title "Installeren..." --message "De apps die je nodig hebt, worden nu geïnstalleerd. Even geduld..." --quitkey "x" --icon "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/logo.png?raw=true"</string>
+			<key>DialogSuccessOptions</key>
+			<string>--title "Installatie voltooid" --message "Installatie voltooid, je Mac wordt herstart..." --button1text "Herstart" --small --icon "https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/pictures/logos/logo.png?raw=true"</string>
+			<key>ExitCondition</key>
+			<string>/Library/Application Support/Alliander/Logs/Baseline_complete.log</string>
+			<key>InitialScripts</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Welcome Dialog</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/alliander-opensource/dwp-nextgen-macos/main/Baseline/initial%20scripts/welcome_dialog.sh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Fetch latest Installomator.sh</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/alliander-opensource/dwp-nextgen-macos/refs/heads/main/Baseline/initial%20scripts/update_installomator.sh</string>
+				</dict>
+			</array>
+			<key>Installomator</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Alliander Support App</string>
+					<key>Icon</key>
+					<string>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/ToolbarFavoritesIcon.icns</string>
+					<key>Label</key>
+					<string>supportapp</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>DisplayLink Manager</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/DisplayLink.png?raw=true</string>
+					<key>Label</key>
+					<string>displaylinkmanager</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Dockutil</string>
+					<key>Icon</key>
+					<string>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/BookmarkIcon.icns</string>
+					<key>Label</key>
+					<string>dockutil</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Word</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/Word.png?raw=true</string>
+					<key>Label</key>
+					<string>microsoftword</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Excel</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/Excel.png?raw=true</string>
+					<key>Label</key>
+					<string>microsoftexcel</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft PowerPoint</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/PowerPoint.png?raw=true</string>
+					<key>Label</key>
+					<string>microsoftpowerpoint</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Outlook</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/Outlook.png?raw=true</string>
+					<key>Label</key>
+					<string>microsoftoutlook</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft OneDrive</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/OneDrive.png?raw=true</string>
+					<key>Label</key>
+					<string>microsoftonedrive</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft OneNote</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/OneNote.png?raw=true</string>
+					<key>Label</key>
+					<string>microsoftonenote</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Teams</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/Teams.png?raw=true</string>
+					<key>Label</key>
+					<string>microsoftteams-rollingout</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Edge</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/Edge.png?raw=true</string>
+					<key>Label</key>
+					<string>microsoftedge</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Defender</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/Defender.png?raw=true</string>
+					<key>Label</key>
+					<string>microsoftdefender</string>
+				</dict>
+			</array>
+			<key>InstallomatorSwiftDialogIntegration</key>
+			<true/>
+			<key>Packages</key>
+			<array/>
+			<key>PayloadDisplayName</key>
+			<string>Baseline</string>
+			<key>PayloadIdentifier</key>
+			<string>com.secondsonconsulting.baseline.D031FEC3-06B0-497A-BC0A-5D24AE8E91AD</string>
+			<key>PayloadType</key>
+			<string>com.secondsonconsulting.baseline</string>
+			<key>PayloadUUID</key>
+			<string>2DE18862-5B0A-47BE-A999-0F358B4F85DA</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProgressBar</key>
+			<true/>
+			<key>Scripts</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Company Portal</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/Portal.png?raw=true</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/microsoft/shell-intune-samples/master/macOS/Apps/Company%20Portal/installCompanyPortal.sh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Rosetta 2</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/Settings.png?raw=true</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/microsoft/shell-intune-samples/master/macOS/Config/Rosetta2/installRosetta2.sh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Dock settings</string>
+					<key>Icon</key>
+					<string>https://github.com/alliander-opensource/dwp-nextgen-macos/blob/main/Baseline/icons/Default.png?raw=true</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/alliander-opensource/dwp-nextgen-macos/main/Baseline/scripts/dockutil_settings.sh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Set Time Zone</string>
+					<key>Icon</key>
+					<string>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/Clock.icns</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/alliander-opensource/dwp-nextgen-macos/main/Baseline/scripts/enable_automatic_timezone.sh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Rename Mac</string>
+					<key>Icon</key>
+					<string>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/VCard.icns</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/alliander-opensource/dwp-nextgen-macos/main/Baseline/scripts/rename_mac.sh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Branding</string>
+					<key>Icon</key>
+					<string>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/GenericFontIcon.icns</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/alliander-opensource/dwp-nextgen-macos/refs/heads/main/Baseline/scripts/setup_localfolders_logo.sh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Finishing up</string>
+					<key>Icon</key>
+					<string>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/Sync.icns</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/alliander-opensource/dwp-nextgen-macos/refs/heads/main/Baseline/scripts/touch_conditionfile.sh</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configuration file for Baseline.sh</string>
+	<key>PayloadDisplayName</key>
+	<string>Baseline Config</string>
+	<key>PayloadIdentifier</key>
+	<string>SECONDSON.6F1AD41D-2069-4861-B72C-C5F0D44C9B99</string>
+	<key>PayloadOrganization</key>
+	<string>Second Son Consulting Inc.</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>31E4B847-2292-429A-BE22-799145E591A3</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
